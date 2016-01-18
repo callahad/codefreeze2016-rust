@@ -1,9 +1,10 @@
 fn main() {
     let y;
     {
-        let x = Box::new(5);
-        y = &x;
-        println!("{}", x);
+        let x = vec!['a','b','c'];
+        y = &x; // Try just 'x' to move ownership to y.
+                // Or try 'x.clone()' to completely duplicate x.
+        println!("{}", x[0]);
     }
-    println!("{}", y)
+    println!("{}", y[0]);
 }

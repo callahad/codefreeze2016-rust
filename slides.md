@@ -1,55 +1,20 @@
-## My Code's a Little Rust-y
+# Rust
 
 #### Dan Callahan &middot; dcallahan@mozilla.com · [@callahad](https://twitter.com/callahad)
 
 <br>
 
-[github.com/callahad/tccc18-rust](https://github.com/callahad/tccc18-rust)
+***
+
+<!-- .slide: data-background="#1E1E21 radial-gradient(ellipse farthest-side at left top , #00549E 0px, transparent 100%) no-repeat scroll center top / 100% 500px" -->
+
+![](img/firefox-developer_logo-wordmark_RGB.png)
+
+### [firefox.com/developer](https://firefox.com/developer)
 
 ---
 
-## The Python/Ruby/Node.JS Lie
-
-<br>
-
-> "[Language] is fast enough, and <br>
-> I can always write a C extension."
-
-<br>
-
-But it's not, and we never do.
-<!-- .element: class="fragment" -->
-
----
-
-## Why don't we write C?
-
-### 1. Other people did it for us.
-
-***
-
-### Lines of C/C++ in Python Projects
-
-|     Project     | # Lines |  %  |
-| --------------- | -------:| ---:|
-| CPython 3.5.0a2 | 399,387 | 43% |
-| NumPy 1.9.2     | 166,034 | 62% |
-| Pillow 2.7.0    |  22,669 | 52% |
-| MarkupSafe 0.23 |     178 | 21% |
-
-***
-
-### We're standing on their shoulders
-
-### And so are they.
-<!-- .element: class="fragment" -->
-
-![Pillow links to libjpeg](img/libjpeg.png)
-<!-- .element: class="fragment" style="max-height: 65%; max-width: 65%;" -->
-
-***
-
-### 2. Writing C is **scary**.
+## C is software's Latin
 
 ***
 
@@ -68,11 +33,7 @@ _I'm not smarter than the glibc or openssl devs._
 
 ---
 
-## But what if you **need** to?
-
-***
-
-### The Dream
+### Rust
 
 <br>
 
@@ -80,53 +41,162 @@ _I'm not smarter than the glibc or openssl devs._
 
 <!-- .element: class="fragment" --> With *guaranteed* safety.
 
----
+***
 
-## Rust.
+> "We thought we would move some of our agent gem to C++, but I didn't feel
+> comfortable maintaining a growing codebase written in an unsafe language that
+> ran inside of our customers' applications.
+>
+> Before long, we shipped a version of the Ruby gem with parts written in Rust,
+> and haven't looked back."
 
----
-
-## Stack vs. Heap
+-- [@wycats](https://twitter.com/wycats), 23 Sep 2014
 
 ***
 
-|      Stack      |     Heap      |
-| --------------- | ------------- |
-| Fast but tiny   | Slow but huge |
-| Function locals | Globals       |
-| Managed by CPU  | Unmanaged     |
+<!-- .slide: data-background-transition="none" data-background="img/jvns-whyrust.jpg" -->
 
-<br>
-
-_Only small values of known, fixed size can go on the stack.
-<br>
-Growable things like vectors must go on the heap._
+&nbsp;
 
 ---
 
-## Managed vs. Unmanaged
+## Safety
 
 ***
 
-<!-- .slide: data-background-transition="none" data-background="img/ownership/01.jpg" -->
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/a01.jpg" -->
 
 &nbsp;
 
 ***
 
-## Managed vs. Unmanaged
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/a02.jpg" -->
 
-_With Real Whiteboards!_
-
-***
-
-## Ownership
-
-_With Real Whiteboards!_
+&nbsp;
 
 ***
 
-<!-- .slide: data-background-transition="none" data-background="img/ownership/20.jpg" -->
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/a03.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/a04.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/b01.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/b02.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/b03.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/c01.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/c02.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/c03.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/c04.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/c05.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/c06.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/c07.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/c08.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/d01.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/d02.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/d03.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/d04.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/d05.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/d06.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/d07.jpg" -->
+
+&nbsp;
+
+***
+
+<!-- .slide: data-background-transition="none" data-background="img/whiteboard/rules.jpg" -->
 
 &nbsp;
 
@@ -134,16 +204,17 @@ _With Real Whiteboards!_
 
 ### Enforced Statically at Compile Time
 
-<br>
+- If it compiles, it won't segfault.
+- If it compiles, there are no data races.
+- No cost at runtime.
 
-- No dangling pointers
-- No use after free vulnerabilities
-- No pointer arithmetic
-- No null pointer dereferencing
+***
 
-<br>
+> "Putting Dropbox's first Rust daemon into production, today!
+>
+> In a nutshell, if Dropbox loses any of your data in the future, you can safely assume Mozilla is to blame. :-P"
 
-_This is a "Zero-Cost Abstraction."_
+-- [@jamwt](https://twitter.com/jamwt), 15 Dec 2015
 
 ---
 
@@ -151,17 +222,11 @@ _This is a "Zero-Cost Abstraction."_
 
 ---
 
-![](img/servo-github.png)
-<!-- .element: style="margin-top: -5%;" -->
+## C-compatible FFI!
 
 ---
 
-![](img/servo-reddit.png)
-<!-- .element: style="margin-top: -5%;" -->
-
----
-
-## Python FFI Demos!
+## Servo
 
 ---
 
@@ -169,12 +234,12 @@ _This is a "Zero-Cost Abstraction."_
 
 _[rust-lang.org](https//rust-lang.org)_
 
+_[rustbyexample.com](http://rustbyexample.com/)_
+
+_[reddit.com/r/rust](https://reddit.com/r/rust/)_
+
 ___
 
 [@callahad](https://twitter.com/callahad)
 
 dcallahan@mozilla.com
-
-___
-
-[github.com/callahad/tccc18-rust](https://github.com/callahad/tccc18-rust)
